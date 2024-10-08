@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'SF Pro Display Semibold';
-    src: url('assets/SF-Pro-Display-Semibold.otf') format('opentype');
+    src: url('https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/blob/master/SF-Pro-Display-Semibold.otf') format('opentype');
 }
 
 /* Bold messages styling */
@@ -123,6 +123,7 @@ body {
     word-break: break-word;
     vertical-align: bottom;
     cursor: pointer;
+    letter-spacing: 0.005rem;
 }
 
 /* Left-side messages */
