@@ -123,7 +123,6 @@ body {
     word-break: break-word;
     vertical-align: bottom;
     cursor: pointer;
-    letter-spacing: 0.005rem;
 }
 
 /* Left-side messages */
