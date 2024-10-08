@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Message Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'SF Pro Display';
+            src: url('assets/SF-Pro-Display-Regular.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'SF Pro Display Semibold';
+            src: url('assets/SF-Pro-Display-Semibold.otf') format('opentype');
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="input-forms">
+            <!-- Header Options -->
+            <div class="header-options">
+                <label>
+                    <input type="checkbox" id="show-header" checked>
+                    Show Contact Info
+                </label>
+                <label>
+                    <input type="checkbox" id="bold-messages">
+                    Use Bold Font
+                </label>
+                <div class="header-inputs">
+                    <label>
+                        Contact Name:
+                        <input type="text" id="contact-name" value="Austin Peterson">
+                    </label>
+                </div>
+            </div>
+
+            <!-- Messages Input -->
+            <div class="messages-input">
+                <h3>Messages</h3>
+                <div id="messages-list">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+            </div>
+
+            <button id="add-message-btn" type="button">Add Message</button>
+            <!-- New Import Script button -->
+            <button id="import-script-btn" type="button" class="gray-btn">Import Script</button>
+
+        </div>
+
+        <!-- Preview Section with Label -->
+        <div class="preview-section">
+            <div class="preview-area">
+                <div class="container">
+                    <!-- Header Section -->
+                    <div class="header">
+                        <img src="assets/header.png" alt="Header background" class="header-bg">
+                        <img src="assets/avatar.png" alt="Contact avatar" class="avatar">
+                        <span class="contact-name">Austin Peterson</span>
+                    </div>
+
+                    <div class="message-container">
+                        <!-- Messages will be rendered here dynamically -->
+                    </div>
+                </div>
+            </div>
+            <!-- Download Image Button moved under preview -->
+            <button id="generate-image-btn" type="button">Download Image</button>
+        </div>
+
+        <!-- Paste input (hidden) -->
+        <textarea id="paste-input" placeholder="Paste your script here" style="display: none;"></textarea>
+    </div>
+
+    <!-- Include html2canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="parser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
